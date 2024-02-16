@@ -1,0 +1,127 @@
+/* Configurando a janela popup */
+
+.modal {
+    /* Fixar e deixar o popup invisível e acima de todos os objetos da página */
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 210px;
+
+    /* Cobrir toda a tela */
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+
+    /* Habilitar rolagem */
+    overflow: auto;
+
+    /* Fallback color */
+    background-color: rgb(0, 0, 0);
+
+    /* Usando fundo transparente */
+    background-color: rgba(15, 0, 10, 0.5);
+}
+
+
+.modalInfo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 30px 0;
+    width: 300px; 
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    border-radius: 15px;
+    box-shadow: 3px 30px 25px 10px rgba(24, 0, 36, 0.7);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.5s;
+    animation-name: animatetop;
+    animation-duration: 0.5s;
+    cursor: default;
+}
+
+
+.detailTitulo {
+    padding-top: 10px;
+    filter: brightness(2);
+    text-transform: capitalize;
+}
+
+
+.imgMasc {
+    margin: 25px auto 8px;
+    display: block;
+}
+
+.detailTypes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.detailTypes__type {
+    margin: .25rem 0;
+    padding: .45rem 0.8rem;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+
+
+.PopUpFechar {
+    margin-top: 30px;
+    padding: 3px 0;
+    width: 80px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #ffffff;
+    border-width: 0;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.PopUpFechar:hover,
+.PopUpFechar:focus {
+    filter: drop-shadow(0 0 0.75rem #ffffff);
+}
+
+
+
+
+/* Animação do popup */
+
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        left: -300px;
+        opacity: 0
+    }
+    to {
+        left: 0px;
+        opacity: 1
+    }
+}
